@@ -1,15 +1,14 @@
-import Component from '@ember/component';
-import ReactDOM from 'react-dom';
+import ReactComponent from '../../react-component';
 
 let Greeter = ({name}) => <h2>Hello from {name}!!!</h2>;
 
-export default Component.extend({
+export default ReactComponent.extend({
+
+  layout: '',
+
   didInsertElement() {
     this._super(...arguments);
-
-    ReactDOM.render(
-      <Greeter name="React"/>,
-      this.element.querySelector('.react-container'),
-    );
+    this.reactRender(<Greeter name="React"/>);
   }
+
 });

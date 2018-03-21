@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',
@@ -8,19 +9,20 @@ module.exports = {
     }
   },
   plugins: [
+    'babel',
     'ember',
     'react',
   ],
   extends: [
     'eslint:recommended',
-    'plugin:ember/recommended'
+    'plugin:ember/recommended',
   ],
   env: {
     browser: true
   },
   rules: {
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
   },
   overrides: [
     // node files

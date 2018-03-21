@@ -17,6 +17,8 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "babel-eslint": "8.2.2",
+    "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-react-jsx": "6.24.1",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
@@ -38,6 +40,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
     "ember-source": "~3.0.0",
+    "eslint-plugin-babel": "4.1.2",
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-react": "7.7.0",
     "glob": "7.1.2",
@@ -48,6 +51,7 @@
   },
   "dependencies": {
     "react": "16.2.0",
+    "react-aria-modal": "2.12.1",
     "react-dom": "16.2.0"
   }
 }

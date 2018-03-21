@@ -7,6 +7,7 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     babel: {
       plugins: [
+        'transform-class-properties',
         'transform-react-jsx',
       ]
     }
@@ -30,7 +31,6 @@ module.exports = function(defaults) {
 
   let shims = glob.sync('vendor/shims/*.js');
   shims.forEach(shim => app.import(shim));
-
 
   return app.toTree();
 };
