@@ -1,5 +1,5 @@
 import React from 'react';
-import AriaModal from 'npm:react-aria-modal';
+import AriaModal from 'react-aria-modal';
 
 export default class DemoModal extends React.Component {
 
