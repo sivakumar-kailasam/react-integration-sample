@@ -1,6 +1,7 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const glob = require('glob');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -19,6 +20,13 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+
+  app.import('node_modules/react/umd/react.production.min.js');
+  app.import('node_modules/react-dom/umd/react-dom.production.min.js');
+
+  let shims = glob.sync('vendor/shims/*.js');
+  shims.forEach(shim => app.import(shim));
+
 
   return app.toTree();
 };
