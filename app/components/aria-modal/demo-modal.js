@@ -28,7 +28,12 @@ export default class DemoModal extends React.Component {
           getApplicationNode={this.getApplicationNode}
           underlayStyle={{ paddingTop: '2em' }}
         >
-          <div id="demo-one-modal" className="modal">
+          <div id="demo-two-modal" className="modal">
+            <header className="modal-header">
+              <h2 id="demo-two-title" className="modal-title">
+                {this.props.title}
+              </h2>
+            </header>
             <div className="modal-body">
               <p>
                 Here is a modal
