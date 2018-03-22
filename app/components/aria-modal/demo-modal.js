@@ -46,6 +46,7 @@ export default class DemoModal extends React.Component {
                 {' '}
                 parts.
               </p>
+              <input onChange={(e) => this.props.onTextChange(e.target.value)} value={this.props.title}/>
             </div>
             <footer className="modal-footer">
               <button id="demo-one-deactivate" onClick={this.deactivateModal}>
